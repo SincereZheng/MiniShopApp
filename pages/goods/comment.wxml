@@ -1,0 +1,20 @@
+<view class="goods_comment_box b-f">
+  <view class="cont-box goods-comment-box b-t b-f b-b" wx:for="{{comment}}" wx:key="goodsComment" wx:for-index="cindex">
+    <text class="admin">{{item.nickname}}</text>
+    <text class="admin sku">{{item.skuname}}</text>
+    <view class="com_xing">
+      <view class="stars" style="background:url('{{ServerNoFileHost}}{{item.stars>=1? 'staron': 'staroff'}}.png') no-repeat"></view>
+      <view class="stars" style="background:url('{{ServerNoFileHost}}{{item.stars>=2? 'staron': 'staroff'}}.png') no-repeat"></view>
+      <view class="stars" style="background:url('{{ServerNoFileHost}}{{item.stars>=3? 'staron': 'staroff'}}.png') no-repeat"></view>
+      <view class="stars" style="background:url('{{ServerNoFileHost}}{{item.stars>=4? 'staron': 'staroff'}}.png') no-repeat"></view>
+      <view class="stars" style="background:url('{{ServerNoFileHost}}{{item.stars>=5? 'staron': 'staroff'}}.png') no-repeat"></view>
+    </view>
+    <view class="goods-comment-cont m-top20">{{item.comment}}</view>
+    <view class="img_box">
+      <view class="imgs" wx:for="{{item.imgurl}}" wx:for-item="img">
+        <image mode="aspectFit" src='{{ServerFileHost}}{{img}}' bindtap="listenerButtonPreviewImage" data-cindex="{{cindex}}" data-index="{{index}}" mode='widthFix' />
+      </view>
+    </view>
+    <view class="f-22 col-9 m-top10">{{item.createtime}}</view>
+  </view>
+</view>

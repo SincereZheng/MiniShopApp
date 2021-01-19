@@ -1,0 +1,30 @@
+<view class="comment1-description">
+    <view class="star-pos" style="display:flex;flex-direction:row;">
+      
+      <view class="stars" style="background:url('{{ServerNoFileHost}}{{flag>=1? 'staron': 'staroff'}}.png') no-repeat" bindtap="changeColor1"></view>
+      <view class="stars" style="background:url('{{ServerNoFileHost}}{{flag>=2? 'staron': 'staroff'}}.png') no-repeat" bindtap="changeColor2"></view>
+      <view class="stars" style="background:url('{{ServerNoFileHost}}{{flag>=3? 'staron': 'staroff'}}.png') no-repeat" bindtap="changeColor3"></view>
+      <view class="stars" style="background:url('{{ServerNoFileHost}}{{flag>=4? 'staron': 'staroff'}}.png') no-repeat" bindtap="changeColor4"></view>
+      <view class="stars" style="background:url('{{ServerNoFileHost}}{{flag>=5? 'staron': 'staroff'}}.png') no-repeat" bindtap="changeColor5"></view>
+    </view>
+  </view>
+
+<view class="conts">
+    <textarea class="areas" placeholder='留下点评，帮助更多人' minlength="{{min}}" maxlength="{{max}}" bindinput="inputs" value="{{inputtext}}"></textarea>
+    <text wx:if="{{type=='add'}}" class="hint">{{texts}}</text>
+    <text wx:if="{{type=='add'}}" class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text>
+</view>
+<!--隐藏上传图片功能，开发者工具会牵涉到ssl证书问题-->
+<view class="img_box">
+  <view class="imgs" wx:for="{{tempFilePaths}}" wx:key="index">
+    <image src='{{item}}' bindlongpress="deleteImage" bindtap="listenerButtonPreviewImage" data-index="{{index}}" mode='widthFix' />
+  </view>
+  <view class="imgs {{showupload}}">
+    <view class="images" bindtap="upload">
+      <image src='{{ServerNoFileHost}}upload.png'  />
+    </view>
+  </view>
+</view>
+<view class="btnSf" wx:if="{{type=='add'}}">
+  <button bindtap="bindSubmit">提交</button>
+</view> 

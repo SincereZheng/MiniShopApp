@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="help cont-box b-f" wx:for="{{limit}}" wx:key="this">
+    <view>
+      <text class="h4">{{item.gname}}</text>
+    </view>
+    <view wx:for="{{item.skus}}" wx:for-item="s">
+      <text class="p">{{s.sku}}</text>
+    </view>
+  </view>
+</view>

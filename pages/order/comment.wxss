@@ -1,0 +1,122 @@
+/* 评论 */
+.conts{
+  width:90%;
+  height: auto;
+  position:relative;
+  padding-bottom:50rpx;
+  margin:0 auto;
+}
+.areas{
+  width:100%;
+  height:152rpx;
+  font-size: 30rpx;
+  text-indent: 5rpx;
+  border: 1rpx solid gainsboro;
+  padding-top: 30rpx;
+  margin: 0 auto;
+  overflow: hidden;   
+  position: relative; 
+}
+.currentWordNumber{
+  font-size: 28rpx;
+  color: gray;
+  position: absolute;
+  right:10rpx;
+  bottom:10rpx;
+}
+.hint{
+   font-size: 28rpx;
+   position: absolute;
+   left:20rpx;
+   bottom:10rpx;
+   color: #FF6600;
+}
+/* 图片 */
+.img_box{
+  width:690rpx;
+  position:relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin:0 auto;
+}
+.imgs{
+  width:33.33333333%;
+  display: flex;
+  justify-content: center;
+  margin-bottom:20rpx;
+}
+.imgs image{
+  width:90%;
+  /* max-height:212rpx; */
+  /* border:1px solid rgba(214, 212, 212, 0.1); */
+  /* box-shadow: 5rpx 5rpx 1rpx 3rpx #e2e0e0; */
+}
+.imgs .images{
+  position:relative;
+}
+.images button{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.img_box .images{
+  width:90%;
+	height: 212rpx;
+  /* border:1px solid #E8E8E8; */
+  border-radius:4rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img_box .images>image{
+  width:100%;
+	height:100%;
+}
+.btnSf{
+  width: 92%;
+  margin:30rpx auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.btnSf button{
+    background: #57B6BA;
+    color: #fff;
+}
+
+.btnSf button:active{
+  background: #5BC2C6;
+  color: #fff;
+}
+.comment1-description{
+  padding:30rpx 0;
+  display:flex;
+  flex-direction:row;
+  width: 90%;
+  margin: 0 auto;
+}
+.stars{
+    width: 30rpx;
+    height: 30rpx;
+    background-size: 100%;
+    transition: 600ms;
+}
+.on{
+    width: 30rpx;
+    height: 30rpx;
+    background-size: 100%;
+    transition: 1s;
+    transform: scale(1,1)
+}
+.weui-cells_after-title{
+  width: 92%;
+  margin:0 auto;
+  border:1px solid #ddd;
+}
+.c-hide{
+  display: none;
+}

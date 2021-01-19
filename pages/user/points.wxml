@@ -1,0 +1,12 @@
+<view class="score">
+  <view>可用积分</view>
+  <view>{{totalpoints}}</view>
+</view>
+<view class='no-data' wx:if="{{record.length==0}}">暂无积分明细~</view>
+<view class='cashlogs' wx:if="{{record}}" wx:for="{{record}}" wx:key="item" bindtap="showRelation" data-item="{{item}}">
+  <view class='profile'>
+    <view class='typeStr'>{{ item.date }} </view>
+    <view class='dateAdd'>{{ item.comment }}</view>
+  </view>
+  <view class='amount' style="color: {{ (item.points < 0 ) ? 'red' : 'green' }}"> {{ (item.points > 0 ) ? '+' : '' }} {{ item.points }} </view>
+</view>

@@ -1,0 +1,28 @@
+<view class="container">
+  <scroll-view class="coupon-list" scroll-y="true" scroll-top="{{scrollTop}}">
+
+    <view class="item" wx:for="{{couponList}}" wx:for-index="index" wx:for-item="item" wx:key="cid" data-cid="{{item.cid}}">
+      <view class="tag">{{item.title}}</view>
+      <view class="content">
+        <view class="left">
+          <view class="discount">{{item.amount}}元</view>
+          <view class="min"> 满{{item.limitamount}}元使用</view>
+        </view>
+        <view class="right">
+          <view class="name">{{item.name}}</view>
+          <view class="time">有效期至：</view>
+          <view class="time"> {{item.overdate}}</view>
+        </view>
+      </view>
+      <view class="condition">
+        <text class="txt">{{item.title}}</text>
+        <text class="txt help" bindtap="showLimit" data-cid="{{item.cid}}">查看使用范围</text>
+      </view>
+    </view>
+
+    <view class="page">
+      <button class="prev" wx:if="{{options.type=='share'}}" data-cid="{{options.cid}}" data-title="{{couponList[0].title}}" open-type="share">分享</button>
+      <button class="prev" wx:if="{{options.type=='me'}}" data-cid="{{options.cid}}" bindtap="getCoupon">立即领取</button>
+    </view>
+  </scroll-view>
+</view>
