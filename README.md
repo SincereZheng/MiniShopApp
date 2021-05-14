@@ -7,13 +7,10 @@
 原地址：[萤火小程序商城](https://gitee.com/xany/bestshop-php)
 
 
-#### 小程序调试
-下载fiddler，模拟调试
-
 
 ### .net服务端
 
-[链接地址](https://gitee.com/nosincere/miniappserver_open_source)
+[链接地址](https://github.com/SincereZheng/MiniAppServer)
 
 
 ### 2020年7月1日16:21:23
